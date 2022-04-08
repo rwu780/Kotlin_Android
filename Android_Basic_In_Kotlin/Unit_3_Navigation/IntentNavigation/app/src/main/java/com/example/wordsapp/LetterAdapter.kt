@@ -63,12 +63,13 @@ class LetterAdapter :
     override fun onBindViewHolder(holder: LetterViewHolder, position: Int) {
         val item = list.get(position)
         holder.button.text = item.toString()
-        holder.button.setOnClickListener { view ->
+        holder.button.setOnClickListener {
             val context = holder.view.context
             val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra("letter", holder.button.text.toString())
 
-            intent.putExtra(DetailActivity.LETTER, holder.button.text.toString())
             context.startActivity(intent)
+
         }
     }
 

@@ -29,9 +29,9 @@ import com.example.wordsapp.databinding.ActivityMainBinding
  * Main Activity and entry point for the app. Displays a RecyclerView of letters.
  */
 class MainActivity : AppCompatActivity() {
+    private lateinit var recyclerView: RecyclerView
 
     private var isLinearLayoutManager = true
-    private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,37 +40,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         recyclerView = binding.recyclerView
-        chooseLayout()
         // Sets the LinearLayoutManager of the recyclerview
-//        recyclerView.layoutManager = LinearLayoutManager(this)
-//        recyclerView.adapter = LetterAdapter()
-    }
-
-    private fun chooseLayout(){
-
-        if(isLinearLayoutManager){
-            recyclerView.layoutManager = LinearLayoutManager(this)
-        }
-        else{
-            recyclerView.layoutManager = GridLayoutManager(this, 4)
-        }
+        recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = LetterAdapter()
 
-    }
-
-    private fun setIcon(menuItem: MenuItem?){
-
-        if(menuItem == null)
-            return
-
-        menuItem.icon =
-            if(isLinearLayoutManager)
-                ContextCompat.getDrawable(this, R.drawable.ic_grid_layout)
-            else
-                ContextCompat.getDrawable(this, R.drawable.ic_linear_layout)
+        chooseLayout()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
         menuInflater.inflate(R.menu.layout_menu, menu)
 
         val layoutButton = menu?.findItem(R.id.action_switch_layout)
@@ -80,7 +58,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId){
+        return when (item.itemId){
             R.id.action_switch_layout -> {
                 isLinearLayoutManager = !isLinearLayoutManager
                 chooseLayout()
@@ -90,5 +68,26 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun chooseLayout(){
+        if (isLinearLayoutManager){
+            recyclerView.layoutManager = LinearLayoutManager(this)
+        }
+        else{
+            recyclerView.layoutManager = GridLayoutManager(this, 4)
+        }
+        recyclerView.adapter = LetterAdapter()
+    }
+
+    fun setIcon(menuItem: MenuItem?){
+
+        if (menuItem == null)
+            return
+
+        menuItem.icon = if(isLinearLayoutManager)
+            ContextCompat.getDrawable(this, R.drawable.ic_linear_layout)
+        else
+            ContextCompat.getDrawable(this, R.drawable.ic_grid_layout)
     }
 }
