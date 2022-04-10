@@ -53,7 +53,10 @@ class PickupFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
-            nextButton.setOnClickListener { goToNextScreen() }
+//            nextButton.setOnClickListener { goToNextScreen() }
+            lifecycleOwner = viewLifecycleOwner
+            viewModel = sharedModelView
+            pickupFragment = this@PickupFragment
         }
     }
 
@@ -71,5 +74,11 @@ class PickupFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
+    }
+
+    fun cancelOrder() {
+        sharedModelView.resetOrder()
+        findNavController().navigate(R.id.action_pickupFragment_to_startFragment)
+
     }
 }

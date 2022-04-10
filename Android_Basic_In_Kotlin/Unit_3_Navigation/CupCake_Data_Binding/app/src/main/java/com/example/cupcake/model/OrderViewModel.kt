@@ -87,7 +87,7 @@ class OrderViewModel : ViewModel() {
 
     }
 
-    private fun resetOrder() {
+    fun resetOrder() {
 
         _quantity.value = 0
         _flavor.value = ""
