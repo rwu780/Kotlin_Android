@@ -51,15 +51,21 @@ class OrderFunctionalityTests : BaseTest() {
         onView(withId(R.id.subtotal))
             .check(matches(withText(containsString("Subtotal: $7.00"))))
 
+        Thread.sleep(500)
+
         // Select the chili item
         onView(withId(R.id.chili)).perform(click())
         onView(withId(R.id.subtotal))
             .check(matches(withText(containsString("Subtotal: $4.00"))))
 
+        Thread.sleep(500)
+
         // Select the pasta item
         onView(withId(R.id.pasta)).perform(click())
         onView(withId(R.id.subtotal))
             .check(matches(withText(containsString("Subtotal: $5.50"))))
+
+        Thread.sleep(500)
 
         // Select the skillet item
         onView(withId(R.id.skillet)).perform(click())
@@ -115,10 +121,14 @@ class OrderFunctionalityTests : BaseTest() {
         onView(withId(R.id.subtotal))
             .check(matches(withText(containsString("Subtotal: $0.50"))))
 
+        Thread.sleep(500)
+
         // Select the soup item
         onView(withId(R.id.berries)).perform(click())
         onView(withId(R.id.subtotal))
             .check(matches(withText(containsString("Subtotal: $1.00"))))
+
+        Thread.sleep(500)
 
         // Select the potato item
         onView(withId(R.id.pickles)).perform(click())

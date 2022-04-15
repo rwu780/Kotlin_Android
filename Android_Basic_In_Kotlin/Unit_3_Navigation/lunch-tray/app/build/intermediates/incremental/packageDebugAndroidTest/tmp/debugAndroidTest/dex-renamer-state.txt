@@ -1,0 +1,7 @@
+#Fri Apr 15 17:26:59 EDT 2022
+base.1=/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/classes.dex
+path.1=classes.dex
+base.0=/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex

@@ -68,16 +68,15 @@ class EntreeMenuFragment : Fragment() {
      * Navigate to the side menu fragment.
      */
     fun goToNextScreen() {
-
-        // TODO: Navigate to the SideMenuFragment
+        findNavController().navigate(R.id.action_entreeMenuFragment_to_sideMenuFragment)
     }
 
     /**
      * Cancel the order and start over.
      */
     fun cancelOrder() {
-        // TODO: Reset order in view model
-        // TODO: Navigate back to the [StartFragment] to start over
+        findNavController().navigate(R.id.action_entreeMenuFragment_to_startOrderFragment)
+        sharedViewModel.resetOrder()
     }
 
     /**

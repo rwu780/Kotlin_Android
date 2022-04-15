@@ -1,26 +1,26 @@
 [
     {
-        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/android-basics-kotlin-lunch-tray-app-main/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_start_order.xml",
-        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/android-basics-kotlin-lunch-tray-app-main/app/src/main/res/layout/fragment_start_order.xml"
+        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_checkout.xml",
+        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/src/main/res/layout/fragment_checkout.xml"
     },
     {
-        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/android-basics-kotlin-lunch-tray-app-main/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_side_menu.xml",
-        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/android-basics-kotlin-lunch-tray-app-main/app/src/main/res/layout/fragment_side_menu.xml"
+        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_start_order.xml",
+        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/src/main/res/layout/fragment_start_order.xml"
     },
     {
-        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/android-basics-kotlin-lunch-tray-app-main/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_checkout.xml",
-        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/android-basics-kotlin-lunch-tray-app-main/app/src/main/res/layout/fragment_checkout.xml"
+        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/android-basics-kotlin-lunch-tray-app-main/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_entree_menu.xml",
-        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/android-basics-kotlin-lunch-tray-app-main/app/src/main/res/layout/fragment_entree_menu.xml"
+        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_side_menu.xml",
+        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/src/main/res/layout/fragment_side_menu.xml"
     },
     {
-        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/android-basics-kotlin-lunch-tray-app-main/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_accompaniment_menu.xml",
-        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/android-basics-kotlin-lunch-tray-app-main/app/src/main/res/layout/fragment_accompaniment_menu.xml"
+        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_entree_menu.xml",
+        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/src/main/res/layout/fragment_entree_menu.xml"
     },
     {
-        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/android-basics-kotlin-lunch-tray-app-main/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
-        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/android-basics-kotlin-lunch-tray-app-main/app/src/main/res/layout/activity_main.xml"
+        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_accompaniment_menu.xml",
+        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/src/main/res/layout/fragment_accompaniment_menu.xml"
     }
 ]

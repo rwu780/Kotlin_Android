@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/android-basics-kotlin-lunch-tray-app-main/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pl/values-pl.xml",
+            "outputFile": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_3_Navigation/lunch-tray/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pl/values-pl.xml",
             "map": [
                 {
                     "source": "/Users/ruiwu/.gradle/caches/transforms-2/files-2.1/720229daa42039c343806cee0ef1e4d5/navigation-ui-2.3.5/res/values-pl/values-pl.xml",
