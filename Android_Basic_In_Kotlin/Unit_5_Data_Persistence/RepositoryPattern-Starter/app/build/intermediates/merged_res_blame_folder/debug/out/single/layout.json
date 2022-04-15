@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_5_Data_Persistence/RepositoryPattern-Starter/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/devbyte_item.xml",
+        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_5_Data_Persistence/RepositoryPattern-Starter/app/src/main/res/layout/devbyte_item.xml"
+    },
+    {
+        "merged": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_5_Data_Persistence/RepositoryPattern-Starter/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_dev_byte.xml",
+        "source": "/Users/ruiwu/AndroidStudioProjects/Kotlin_Android/Android_Basic_In_Kotlin/Unit_5_Data_Persistence/RepositoryPattern-Starter/app/src/main/res/layout/fragment_dev_byte.xml"
+    }
+]
