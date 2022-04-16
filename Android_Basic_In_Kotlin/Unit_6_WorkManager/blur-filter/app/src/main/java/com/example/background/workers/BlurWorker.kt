@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.BitmapFactory
 import androidx.work.Worker
 import androidx.work.WorkerParameters
+import com.example.background.KEY_IMAGE_URI
 import com.example.background.R
 
 class BlurWorker (
@@ -11,17 +12,30 @@ class BlurWorker (
     params: WorkerParameters
     ) : Worker(ctx, params){
 
+
+
     override fun doWork(): Result {
 
-        val picture = BitmapFactory.decodeResource(
-            applicationContext.resources,
-            R.drawable.android_cupcake
-        )
+        val appContext = applicationContext
 
-        val blurPicture = blurBitmap(picture,applicationContext)
+        val resourceUri = inputData.getString(KEY_IMAGE_URI)
 
-        // Write bitmap to a temp file
-        val outputUri = writeBitmapToFile(applicationContext, blurPicture)
+        return try {
+            val picture = BitmapFactory.decodeResource(
+                appContext.resources,
+                R.drawable.android_cupcake
+            )
+
+            val blurPicture = blurBitmap(picture, appContext)
+
+            val tempUrl = writeBitmapToFile(appContext, blurPicture)
+            makeStatusNotification("Output is $tempUrl", appContext)
+
+            Result.success()
+        } catch (throwable: Throwable){
+            Result.failure()
+        }
+
 
     }
 
