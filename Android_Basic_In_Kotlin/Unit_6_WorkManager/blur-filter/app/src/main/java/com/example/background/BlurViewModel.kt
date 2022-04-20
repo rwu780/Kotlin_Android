@@ -20,24 +20,27 @@ import android.app.Application
 import android.content.ContentResolver
 import android.content.Context
 import android.net.Uri
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.work.Data
-import androidx.work.OneTimeWorkRequest
-import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.WorkManager
+import androidx.work.*
 import com.example.background.workers.BlurWorker
+import com.example.background.workers.CleanupWorker
+import com.example.background.workers.SaveImageToFileWorker
 
 
 class BlurViewModel(application: Application) : ViewModel() {
 
     internal var imageUri: Uri? = null
     internal var outputUri: Uri? = null
+    internal val outputWorkInfos: LiveData<List<WorkInfo>>
 
     private val workManager = WorkManager.getInstance(application)
 
     init {
         imageUri = getImageUri(application.applicationContext)
+
+        outputWorkInfos = workManager.getWorkInfosByTagLiveData(TAG_OUTPUT)
     }
     /**
      * Create the WorkRequest to apply the blur and save the resulting image
@@ -52,8 +55,32 @@ class BlurViewModel(application: Application) : ViewModel() {
         }
     }
 
+    // Work Manager
     internal fun applyBlur(blurLevel: Int){
-        workManager.enqueue(OneTimeWorkRequest.from(BlurWorker::class.java))
+
+
+        var continuation = workManager
+            .beginWith(OneTimeWorkRequest.from(CleanupWorker::class.java))
+
+        val blurRequest = OneTimeWorkRequest.Builder(BlurWorker::class.java)
+            .setInputData(createInputDataUri())
+            .build()
+
+        continuation = continuation.then(blurRequest)
+
+        val constraints = Constraints.Builder().setRequiresCharging(true).build()
+
+        val save = OneTimeWorkRequest
+            .Builder(SaveImageToFileWorker::class.java)
+            .setConstraints(constraints)
+            .addTag(TAG_OUTPUT).build()
+
+        continuation = continuation.then(save)
+
+        continuation.enqueue()
+
+
+//        workManager.enqueue(blurRequest)
     }
 
     private fun getImageUri(context: Context): Uri {
@@ -81,8 +108,6 @@ class BlurViewModel(application: Application) : ViewModel() {
         }
         return builder.build()
 
-
-
     }
 
     class BlurViewModelFactory(private val application: Application) : ViewModelProvider.Factory {
@@ -94,5 +119,9 @@ class BlurViewModel(application: Application) : ViewModel() {
                 throw IllegalArgumentException("Unknown ViewModel class")
             }
         }
+    }
+
+    internal fun cancelWork() {
+        workManager.cancelUniqueWork(IMAGE_MANIPULATION_WORK_NAME)
     }
 }
