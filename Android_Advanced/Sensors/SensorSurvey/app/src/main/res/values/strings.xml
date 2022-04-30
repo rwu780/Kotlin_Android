@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">SensorSurvey</string>
-    <string name="proximity_sensor_text">Proximity Sensor: %1$.2f</string>
-    <string name="light_sensor_text">Light Sensor: %1$.2f</string>
-    <string name="error_no_sensor">No sensor</string>
-    <string name="get_sensor_data">Get Sensor Data</string>
-</resources>
