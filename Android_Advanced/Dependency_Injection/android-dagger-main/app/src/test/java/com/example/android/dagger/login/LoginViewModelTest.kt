@@ -38,8 +38,11 @@ class LoginViewModelTest {
 
     @Before
     fun setup() {
+
         userManager = mock(UserManager::class.java)
         viewModel = LoginViewModel(userManager)
+
+
     }
 
     @Test

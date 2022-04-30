@@ -11,4 +11,6 @@ abstract class StorageModule {
 
     @Binds
     abstract fun provideStorage(storage: SharedPreferencesStorage): Storage
+
+
 }

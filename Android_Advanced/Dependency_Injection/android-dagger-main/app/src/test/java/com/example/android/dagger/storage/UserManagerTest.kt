@@ -30,6 +30,11 @@ class UserManagerTest {
 
     @Before
     fun setup() {
+
+        val userComponentFactory = Mockito.mock(UserComponent.Factory::class.java)
+        val userComponent = Mockito.mock(UserComponent::class.java)
+        `when`(userComponentFactory.create()).thenReturn(userComponent)
+
         storage = FakeStorage()
         userManager = UserManager(storage)
     }
