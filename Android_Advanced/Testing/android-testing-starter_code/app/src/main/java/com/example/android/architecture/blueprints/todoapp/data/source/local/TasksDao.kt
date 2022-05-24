@@ -28,7 +28,8 @@ import com.example.android.architecture.blueprints.todoapp.data.Task
  * Data Access Object for the tasks table.
  */
 @Dao
-interface TasksDao {
+interface
+ TasksDao {
 
     /**
      * Observes list of tasks.

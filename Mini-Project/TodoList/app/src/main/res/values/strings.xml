@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+    <string name="tasks_header_image">Tasks header image</string>
+    <string name="todo">Todo</string>
+    <string name="task_list">Task List</string>
+    <string name="statistics">Statistics</string>
+</resources>
