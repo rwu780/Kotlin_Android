@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/personList">
+
+    <fragment
+        android:id="@+id/personDetail"
+        android:name="com.example.databasecrud.ui.PersonDetail"
+        android:label="fragment_person_detail"
+        tools:layout="@layout/fragment_person_detail" >
+        <action
+            android:id="@+id/action_personDetail_to_personList"
+            app:destination="@id/personList"
+            app:popUpTo="@id/personList"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/personList"
+        android:name="com.example.databasecrud.ui.PersonList"
+        android:label="fragment_person_list"
+        tools:layout="@layout/fragment_person_list" >
+        <action
+            android:id="@+id/action_personList_to_personDetail"
+            app:destination="@id/personDetail" />
+    </fragment>
+</navigation>
